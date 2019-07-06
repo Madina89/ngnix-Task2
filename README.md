@@ -2,4 +2,4 @@
 ngnix test2
 
 ----
-[](Task2/ngix.png)
+![](Task2/ngix.png)
