@@ -15,7 +15,7 @@ spec:
         kube: Task2
     spec:         
       containers: 
-      - name: ngnix
-        image: ngnix
+      - name: nginx 
+        image: nginx
 
   
