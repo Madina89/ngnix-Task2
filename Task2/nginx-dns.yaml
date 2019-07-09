@@ -27,6 +27,6 @@ spec:
   selector:
     rs: nginx
   ports:
-   - protocol: DNS
+   - protocol: TCP
      port: 80
             
