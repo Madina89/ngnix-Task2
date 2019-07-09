@@ -1,0 +1,12 @@
+apiVesion: v1
+kind: Service
+metadata:
+  name: nginx - service
+spec: 
+  selector:
+    rs: nginx
+  ports:
+   - protocol: TCP
+     port: 81
+    
+  

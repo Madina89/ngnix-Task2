@@ -1,6 +1,8 @@
 apiVersion: v1
 kind: Replicaset
 metadata: 
+  labels: 
+    rs: ngnix
   name: k8-service
 spec:
   replicas: 3
@@ -15,4 +17,5 @@ spec:
   containers: 
   - name: ngnix
     image: ngnix
-      
+
+  
