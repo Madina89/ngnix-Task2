@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata: 
+  labels: 
+    rs: ngnix
+  name: nginx-dns
+spec:
+  replicas: 3
+  selector:
+     matchLabels:
+       kube: Task2
+  template:
+    metadata:
+      labels:
+        kube: Task2
+    spec:         
+      containers: 
+      - name: nginx 
+        image: nginx
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-dns
+spec: 
+  selector:
+    rs: nginx
+  ports:
+   - protocol: DNS
+     port: 80
+            
