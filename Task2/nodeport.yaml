@@ -6,7 +6,7 @@ spec:
   selector:
     rs: nginx
   ports:
-   - protocol: TCP
+   - protocol: tcp
      port: 81
     
   
