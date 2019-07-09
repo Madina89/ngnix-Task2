@@ -14,8 +14,8 @@ spec:
       labels:
         kube: Task2
     spec:         
-  containers: 
-  - name: ngnix
-    image: ngnix
+      containers: 
+      - name: ngnix
+        image: ngnix
 
   
