@@ -2,22 +2,21 @@ apiVersion: v1
 kind: ReplicationController
 metadata:
   labels: 
-    rs: ngnix
+    rs: nginx
   name: nginx-test
 spec:
   replicas: 3
   selector:
-    kube: task2
+    rs: nginx
   template:
     metadata:
       labels:
-        kube: task2
+        rs: nginx
     spec: 
       containers:
       - name: nginx-test
         image: nginx
-        ports:
-        - containerPort: 80
+        
 ---
 apiVersion: v1
 kind: Service
